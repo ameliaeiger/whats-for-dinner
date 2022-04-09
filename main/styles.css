@@ -13,6 +13,12 @@ red - #ee5253;
 	src: url("../assets/CottonCloud.ttf");
 }
 
+@font-face {
+	font-family: "pirate";
+	src: url("../assets/Pirate.ttf");
+}
+
+
 body {
   display: flex;
   flex-direction: column;
@@ -21,6 +27,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-image: url("../assets/burger-friends.jpg");
   background-size: cover;
+	background-repeat: no-repeat;
 	background-position: center top;
 	margin: 0px;
 	padding: 0px;
@@ -29,6 +36,11 @@ body {
 button {
   display: flex;
   padding: 10px;
+}
+
+h2 {
+	font-size: 25px;
+	font-family: "pirate"
 }
 
 /* ---- HEADER ---- */
@@ -138,7 +150,16 @@ button {
 }
 
 .display.dreamy {
-background-color: #FFF9FE;
+	background-color: #FFF9FE;
+}
+
+.button.dreamy {
+	border: none;
+	background-color: #D5F5E3;
+}
+
+.button.dreamy:hover {
+	
 }
 
 /* LUNA */
@@ -157,9 +178,6 @@ background-color: #FFF9FE;
 	color: white;
 }
 
-.display.luna {
-background-color: #FFF9FE;
-}
 /* Colors:
 
 Midnight Blue: #1F2B6A
