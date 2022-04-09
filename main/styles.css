@@ -24,7 +24,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+	font-family: courier;
   background-image: url("../assets/burger-friends.jpg");
   background-size: cover;
 	background-repeat: no-repeat;
@@ -35,12 +36,17 @@ body {
 
 button {
   display: flex;
+	font-family: courier;
   padding: 10px;
+}
+
+button:hover {
+	cursor: pointer;
 }
 
 h2 {
 	font-size: 25px;
-	font-family: "pirate"
+	font-family: courier;
 }
 
 /* ---- HEADER ---- */
@@ -64,7 +70,6 @@ h2 {
 
 #header-button {
   margin-right: 50px;
-  border-radius: 5px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -151,15 +156,28 @@ h2 {
 
 .display.dreamy {
 	background-color: #FFF9FE;
+	border-radius: 25px;
 }
 
 .button.dreamy {
-	border: none;
+	border: 2px solid #ABEBC6;
+	border-radius: 15px;
 	background-color: #D5F5E3;
 }
 
 .button.dreamy:hover {
-	
+background-color: #ABEBC6;
+}
+
+.submit.dreamy {
+	font-family: courier;
+	border: 2px solid #FFC8E7;
+	border-radius: 15px;
+	background-color: #FCE1F0;
+}
+
+.submit.dreamy:hover {
+	background-color: #FFC8E7;
 }
 
 /* LUNA */
