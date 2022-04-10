@@ -8,50 +8,42 @@
 
   <!-- NAVBAR -->
     <header class="navbar customizable">
-  <!--    <div class="navbar-container"> -->
         <h1 class="welcome-message customizable" id="welcome-message">What's for dinner?</h1>
         <div class="icon-container">
           <a href="../index.html"><button class="button customizable" id="home-button">HOME</button></a>
           <button class="button customizable" id="header-button">ADD A RECIPE</button>
         </div>
-  <!--    </div> -->
     </header>
   <!-- END NAVBAR -->
 
-  <div class="container customizable">
+    <div class="container customizable">
   <!-- USER INPUT FORM-->
-  <article class="display customizable" id="userInputForm">
-    <h2>Whatcha hungry for?</h2>
-    <form id="userForm" input type="radio">
-
-      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button0" value="siderecipes">
-      <label for="side">Side</label></div><br>
-      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button1" value="mainrecipes">
-      <label for="main-dish">Main Dish</label></div><br>
-      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button2" value="desserts">
-      <label for="side">Dessert</label></div><br>
-      <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button3" value="entire-meal">
-      <label for="main-dish">Entire Meal</label></div><br>
-
-
-      <button class="submit customizable" id="submit">Let's Cook!</button>
-    </form>
-  </article>
+      <article class="display customizable" id="userInputForm">
+        <h2>Whatcha hungry for?</h2>
+        <form id="userForm" input type="radio">
+          <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button0" value="siderecipes">
+          <label for="side">Side</label></div><br>
+          <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button1" value="mainrecipes">
+          <label for="main-dish">Main Dish</label></div><br>
+          <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button2" value="desserts">
+          <label for="side">Dessert</label></div><br>
+          <div class="buttondiv"><input type="radio" name="userSelection" class="radioButtons" id="button3" value="entire-meal">
+          <label for="main-dish">Entire Meal</label></div><br>
+          <button class="submit customizable" id="submit">Let's Cook!</button>
+        </form>
+      </article>
   <!--END FORM -->
 
-
   <!-- RECIPE DISPlAY-->
-  <div class="display customizable" id="recipeResultsContainer">
-  <div id="results-string-container"></div>
-  <article id="recipeDisplayContainer">
-    <img class="cookpot" id="cookpot" src="../assets/cookpot.svg">
-  </article>
-  </div>
-
-
+    <div class="display customizable" id="recipeResultsContainer">
+      <div id="results-string-container"></div>
+      <article id="recipeDisplayContainer">
+        <img class="cookpot" id="cookpot" src="../assets/cookpot.svg">
+      </article>
+    </div>
   <!--END DISPLAY-->
 
-</div>
+  </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>

@@ -117,7 +117,6 @@ a {
   margin-bottom: 20px;
   font-style: italic;
 }
-/*    --------    */
 
 .dish-title {
   display: flex;
@@ -135,7 +134,18 @@ a {
   height: 300px;
 }
 
-/* THEMES */
+/* ---- THEMES ---- */
+
+/* STANDARD */
+
+.button.standard {
+	background-color: #0fb9b1;
+	border: none;
+}
+
+.button.standard:hover {
+	background-color: black;
+}
 
 /* DREAMY */
 

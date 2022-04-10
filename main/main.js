@@ -1,59 +1,59 @@
 let mainrecipes = [
-"Spaghetti and Meatballs",
-"Pineapple Chicken",
-"Shakshuka",
-"Thai Yellow Curry",
-"Bibimbap",
-"Chicken Parmesean",
-"Butternut Squash Soup",
-"BBQ Chicken Burgers",
-"Ramen",
-"Empanadas",
-"Chicken Fried Rice",
-"Sheet Pan Fajitas",
-"Margarita Pizza"]
+  "Spaghetti and Meatballs",
+  "Pineapple Chicken",
+  "Shakshuka",
+  "Thai Yellow Curry",
+  "Bibimbap",
+  "Chicken Parmesean",
+  "Butternut Squash Soup",
+  "BBQ Chicken Burgers",
+  "Ramen",
+  "Empanadas",
+  "Chicken Fried Rice",
+  "Sheet Pan Fajitas",
+  "Margarita Pizza"]
 
 let siderecipes = [
-"Miso Glazed Carrots",
-"Coleslaw",
-"Garden Salad",
-"Crispy Potatoes",
-"Sweet Potato Tots",
-"Coconut Rice",
-"Caeser Salad",
-"Shrimp Summer Rolls",
-"Garlic Butter Mushrooms",
-"Hush Puppies"]
+  "Miso Glazed Carrots",
+  "Coleslaw",
+  "Garden Salad",
+  "Crispy Potatoes",
+  "Sweet Potato Tots",
+  "Coconut Rice",
+  "Caeser Salad",
+  "Shrimp Summer Rolls",
+  "Garlic Butter Mushrooms",
+  "Hush Puppies"]
 
 let desserts = [
-"Apple Pie",
-"Lemon Meringue Pie",
-"Black Forest Cake",
-"Banana Bread",
-"Peach Cobbler",
-"Cheesecake",
-"Funfetti Cake",
-"Baklava",
-"Flan",
-"Macarons",
-"Macaroons",
-"Chocolate Cupcakes",
-"Pavlova",
-"Pumpkin Pie",
-"Key Lime Pie",
-"Tart Tatin",
-"Croissants",
-"Eclairs"]
+  "Apple Pie",
+  "Lemon Meringue Pie",
+  "Black Forest Cake",
+  "Banana Bread",
+  "Peach Cobbler",
+  "Cheesecake",
+  "Funfetti Cake",
+  "Baklava",
+  "Flan",
+  "Macarons",
+  "Macaroons",
+  "Chocolate Cupcakes",
+  "Pavlova",
+  "Pumpkin Pie",
+  "Key Lime Pie",
+  "Tart Tatin",
+  "Croissants",
+  "Eclairs"]
 
+let userInputTheme = localStorage.getItem("theme");
+let username = localStorage.getItem("username");
 let userInputForm = document.querySelectorAll(".radioButtons");
 let resultsWindow = document.getElementById("recipeDisplayContainer");
 let userTitle = document.getElementById("welcome-message");
 let navbar = document.querySelector(".navbar");
 let bodyImage = document.querySelector(".display-container");
 let boxes = document.querySelectorAll(".display");
-let themedChanges = document.querySelectorAll(".customizable");
-let userInputTheme = localStorage.getItem("theme");
-let username = localStorage.getItem("username");
+let customizable = document.querySelectorAll(".customizable");
 let addRecipeButton = document.getElementById("header-button");
 let homeButton = document.getElementById("home-button");
 let submitButton = document.getElementById("submit");
@@ -86,7 +86,6 @@ function returnRecipe(selection) {
   let recipeMain = getRandomElement(mainrecipes);
   let recipeSide = getRandomElement(siderecipes);
   let recipeDessert = getRandomElement(desserts);
-
   if (selection == "mainrecipes") {
     return recipeMain;
   } else if (selection == "siderecipes") {
@@ -101,8 +100,6 @@ function returnRecipe(selection) {
   }
 }
 
-
-
 function displayResults(randomRecipe) {
   let resultsStringContainer = document.getElementById("results-string-container");
   resultsStringContainer.innerText = "You should have: "
@@ -111,8 +108,8 @@ function displayResults(randomRecipe) {
 
 function displayCustomizedFeatures(userInputTheme) {
   displayUsername()
-  for (let i = 0; i < themedChanges.length; i++) {
-    themedChanges[i].classList.add(userInputTheme)
+  for (let i = 0; i < customizable.length; i++) {
+    customizable[i].classList.add(userInputTheme)
     }
     addRecipeButton.innerHTML = `<img src="../assets/${userInputTheme}recipe.png">`
     homeButton.innerHTML = `<img src="../assets/${userInputTheme}home.png">`
