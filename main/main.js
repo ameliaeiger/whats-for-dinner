@@ -26,7 +26,6 @@ let siderecipes = [
 "Hush Puppies"]
 
 let desserts = [
-"Desserts",
 "Apple Pie",
 "Lemon Meringue Pie",
 "Black Forest Cake",
@@ -46,15 +45,7 @@ let desserts = [
 "Croissants",
 "Eclairs"]
 
-
-//window.addEventListener("load", displayCustomizedFeatures);
-
-
-let favoriteRecipes = [];
-
-
 let userInputForm = document.querySelectorAll(".radioButtons");
-let submitButton = document.getElementById("submit");
 let resultsWindow = document.getElementById("recipeDisplayContainer");
 let userTitle = document.getElementById("welcome-message");
 let navbar = document.querySelector(".navbar");
@@ -65,12 +56,10 @@ let userInputTheme = localStorage.getItem("theme");
 let username = localStorage.getItem("username");
 let addRecipeButton = document.getElementById("header-button");
 let homeButton = document.getElementById("home-button");
-
-
+let submitButton = document.getElementById("submit");
 
 submitButton.addEventListener("click", formHandler);
 displayCustomizedFeatures(userInputTheme);
-
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -94,14 +83,15 @@ function formHandler(){
 }
 
 function returnRecipe(selection) {
-      let recipeMain = getRandomElement(mainrecipes);
-      let recipeSide = getRandomElement(siderecipes);
-      let recipeDessert = getRandomElement(desserts);
-  if (selection == "main") {
+  let recipeMain = getRandomElement(mainrecipes);
+  let recipeSide = getRandomElement(siderecipes);
+  let recipeDessert = getRandomElement(desserts);
+
+  if (selection == "mainrecipes") {
     return recipeMain;
-  } else if (selection == "side") {
+  } else if (selection == "siderecipes") {
     return recipeSide;
-  } else if (selection == "dessert") {
+  } else if (selection == "desserts") {
     return recipeDessert;
   } else if (selection == "entire-meal") {
     let mealString = `<div class="dishes-container"><h3 class="dish-title">Main dish:</h3><div class="dishes">${recipeMain}</div>
@@ -111,34 +101,25 @@ function returnRecipe(selection) {
   }
 }
 
+
+
 function displayResults(randomRecipe) {
-  let thing = document.getElementById("results-string-container");
-  thing.innerText = "You should have: "
+  let resultsStringContainer = document.getElementById("results-string-container");
+  resultsStringContainer.innerText = "You should have: "
   resultsWindow.innerHTML = randomRecipe;
 }
 
 function displayCustomizedFeatures(userInputTheme) {
   displayUsername()
-  changeIcons(userInputTheme)
   for (let i = 0; i < themedChanges.length; i++) {
     themedChanges[i].classList.add(userInputTheme)
     }
+    addRecipeButton.innerHTML = `<img src="../assets/${userInputTheme}recipe.png">`
+    homeButton.innerHTML = `<img src="../assets/${userInputTheme}home.png">`
   }
 
 function displayUsername(){
-  if (username == false){
-    console.log("No username")
-  } else {
+  if (username){
     userTitle.innerText = `What's for dinner, ${username}?`
-  }
-}
-
-function changeIcons(userInputTheme){
-  if (userInputTheme == "dreamy") {
-    addRecipeButton.innerHTML = `<img id="add-recipe-dreamy" src="../assets/dreamyrecipe.png">`
-    homeButton.innerHTML = `<img src="../assets/dreamyhome.png">`
-  } else if (userInputTheme == "luna") {
-    addRecipeButton.innerHTML = `<img id="add-recipe-luna" src="../assets/lunarecipe.png">`
-    homeButton.innerHTML = `<img src="../assets/lunahome.png">`
   }
 }
