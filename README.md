@@ -23,6 +23,10 @@ View the deployed page [here](https://ameliaeiger.github.io/whats-for-dinner/)!
 
 ### 2. Login Page
 
+- Sick login page to customize your food-choosing experience
+
+![login page](https://i.imgur.com/lAiyZNg.jpg)
+
 - Select your choice of site theme from a dropdown menu
 
 ![dropdown](https://i.imgur.com/BGJfR2a.png)
