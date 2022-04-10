@@ -49,6 +49,9 @@ h2 {
 	font-family: courier;
 }
 
+a {
+	text-decoration: none;
+}
 /* ---- HEADER ---- */
 .navbar {
   display: flex;
@@ -68,6 +71,10 @@ h2 {
   font-size: 35px;
 }
 
+.icon-container {
+	display: flex;
+}
+
 #header-button {
   margin-right: 50px;
   padding-left: 15px;
@@ -84,12 +91,12 @@ h2 {
 
 .display {
   display: flex;
-  background-color: rgba(225, 225, 225, .9);
+  background-color: rgba(225, 225, 225, .8);
   padding-right: 50px;
   padding-left: 50px;
 	height: 400px;
   width: 400px;
-	margin: 25px;
+	margin: 25px 100px 25px 100px;
 	/* margin: 250px 100px 250px 100px; */
 }
 
@@ -145,22 +152,25 @@ h2 {
 /* DREAMY */
 
 .body.dreamy {
-	background-image: url("https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271__480.jpg");
+	/* background-image: url("https://cdn.pixabay.com/photo/2017/02/16/19/47/bokeh-2072271__480.jpg"); */
+	/* background-image: url("https://wallpapercave.com/wp/wp5134857.png") */
+	background-image: url("https://wallpapercave.com/dwp2x/wp9952056.jpg")
 }
 
 .navbar.dreamy {
   background-color: #D5F5E3;
+	opacity: .7;
   border-bottom: 4px #ABEBC6 solid;
-  font-family: "cloud"
+  font-family: "cloud";
 }
 
 .display.dreamy {
-	background-color: #FFF9FE;
-	border-radius: 25px;
+	background-color: rgba(255, 249, 254, .8);
+	/* #FFF9FE; */
 }
 
 .button.dreamy {
-	border: 2px solid #ABEBC6;
+	border: none;
 	border-radius: 15px;
 	background-color: #D5F5E3;
 }
@@ -183,17 +193,28 @@ background-color: #ABEBC6;
 /* LUNA */
 
 .body.luna {
-	background-image: url("https://media.istockphoto.com/photos/night-sky-with-stars-and-soft-milky-way-universe-as-background-or-picture-id971578384?b=1&k=20&m=971578384&s=170667a&w=0&h=Rpn3K4UC9rKyFjYj4_zXr7eR57nEn2iS1GFcmXYs3iI=");
+	/* background-image: url("https://wallpapercave.com/wp/wp6235493.jpg"); */
+	background-image: url("https://wallpapercave.com/wp/wp7691225.jpg")
 }
 
 .navbar.luna {
   background-color: #021631;
+	opacity: .7;
   border-bottom: 4px #1F2B6A solid;
   font-family: "cloud"
 }
 
 .welcome-message.luna {
 	color: white;
+}
+
+.button.luna {
+	background-color: #021631;
+	border: none;
+}
+
+.button.luna:hover {
+	background-color: #1F2B6A;
 }
 
 /* Colors:

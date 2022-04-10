@@ -61,8 +61,10 @@ let navbar = document.querySelector(".navbar");
 let bodyImage = document.querySelector(".display-container");
 let boxes = document.querySelectorAll(".display");
 let themedChanges = document.querySelectorAll(".customizable");
-let userInputTheme = localStorage.getItem("theme")
-let username = localStorage.getItem("username")
+let userInputTheme = localStorage.getItem("theme");
+let username = localStorage.getItem("username");
+let addRecipeButton = document.getElementById("header-button");
+let homeButton = document.getElementById("home-button");
 
 
 
@@ -117,6 +119,7 @@ function displayResults(randomRecipe) {
 
 function displayCustomizedFeatures(userInputTheme) {
   displayUsername()
+  changeIcons(userInputTheme)
   for (let i = 0; i < themedChanges.length; i++) {
     themedChanges[i].classList.add(userInputTheme)
     }
@@ -127,5 +130,15 @@ function displayUsername(){
     console.log("No username")
   } else {
     userTitle.innerText = `What's for dinner, ${username}?`
+  }
+}
+
+function changeIcons(userInputTheme){
+  if (userInputTheme == "dreamy") {
+    addRecipeButton.innerHTML = `<img id="add-recipe-dreamy" src="../assets/dreamyrecipe.png">`
+    homeButton.innerHTML = `<img src="../assets/dreamyhome.png">`
+  } else if (userInputTheme == "luna") {
+    addRecipeButton.innerHTML = `<img id="add-recipe-luna" src="../assets/lunarecipe.png">`
+    homeButton.innerHTML = `<img src="../assets/lunahome.png">`
   }
 }
