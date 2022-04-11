@@ -208,6 +208,11 @@ a {
 	color: white;
 }
 
+.submit.luna,
+.submit.standard {
+	border: 2px solid black;
+}
+
 .button.luna:hover {
 	background-color: #1F2B6A;
 }
