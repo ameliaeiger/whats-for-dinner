@@ -27,6 +27,7 @@ button {
   display: flex;
 	font-family: courier;
   padding: 10px;
+	border: none;
 }
 
 button:hover {
@@ -35,7 +36,6 @@ button:hover {
 
 h2 {
 	font-size: 25px;
-	font-family: courier;
 }
 
 a {
@@ -62,12 +62,12 @@ a {
 
 .icon-container {
 	display: flex;
+	margin-right: 50px;
 }
 
-.add-recipe {
-  margin-right: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+.add-recipe,
+.home {
+	padding: 15px 15px;
 }
 
 /* ---- MAIN DISPLAY ---- */
@@ -75,17 +75,15 @@ a {
   display: flex;
   justify-content: center;
 	flex-wrap: wrap;
-
 }
 
 .display {
   display: flex;
-  background-color: rgba(225, 225, 225, .8);
-  padding-right: 50px;
-  padding-left: 50px;
+  background-color: rgba(225, 225, 225, .9);
+  padding: 0px 50px;
 	height: 400px;
   width: 400px;
-	margin: 25px 100px 25px 100px;
+	margin: 25px 100px;
 }
 
 /* ---- LEFT BOX ---- */
@@ -132,16 +130,14 @@ a {
 
 .cookpot {
   display: flex;
-  height: 300px;
+  height: 270px;
 }
-
 /* ---- THEMES ---- */
 
 /* STANDARD */
 
 .button.standard {
 	background-color: #0fb9b1;
-	border: none;
 }
 
 .button.standard:hover {
@@ -154,8 +150,12 @@ a {
 	background-image: url("https://wallpapercave.com/dwp2x/wp9952056.jpg")
 }
 
+.navbar.dreamy,
+.button.dreamy {
+	background-color: #D5F5E3;
+}
+
 .navbar.dreamy {
-  background-color: #D5F5E3;
 	opacity: .7;
   border-bottom: 4px #ABEBC6 solid;
   font-family: "cloud";
@@ -166,17 +166,14 @@ a {
 }
 
 .button.dreamy {
-	border: none;
 	border-radius: 15px;
-	background-color: #D5F5E3;
 }
 
 .button.dreamy:hover {
-background-color: #ABEBC6;
+	background-color: #ABEBC6;
 }
 
 .submit.dreamy {
-	font-family: courier;
 	border: 2px solid #FFC8E7;
 	border-radius: 15px;
 	background-color: #FCE1F0;
@@ -193,19 +190,22 @@ background-color: #ABEBC6;
 }
 
 .navbar.luna {
-  background-color: #021631;
 	opacity: .7;
   border-bottom: 4px #1F2B6A solid;
   font-family: "cloud"
 }
 
-.welcome-message.luna {
-	color: white;
-}
-
+.navbar.luna,
 .button.luna {
 	background-color: #021631;
-	border: none;
+}
+
+.display.luna {
+	opacity: .8;
+}
+
+.welcome-message.luna {
+	color: white;
 }
 
 .button.luna:hover {
