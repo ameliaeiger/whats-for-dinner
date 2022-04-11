@@ -60,6 +60,7 @@ let submitButton = document.querySelector(".submit");
 
 submitButton.addEventListener("click", formHandler);
 displayCustomizedFeatures(userInputTheme);
+addRecipeButton.addEventListener("click", alertUser);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -73,6 +74,9 @@ function getRandomElement(array) {
 
 function formHandler(){
   event.preventDefault();
+  if (!userInputForm[0].checked && !userInputForm[1].checked && !userInputForm[2].checked && !userInputForm[3].checked) {
+    alert("Please select an option")
+  }
   for (let i = 0; i < 4; i++) {
     if (userInputForm[i].checked) {
       let selection = userInputForm[i].value;
@@ -86,13 +90,13 @@ function returnRecipe(selection) {
   let recipeMain = getRandomElement(mainrecipes);
   let recipeSide = getRandomElement(siderecipes);
   let recipeDessert = getRandomElement(desserts);
-  if (selection == "mainrecipes") {
+  if (selection === "mainrecipes") {
     return recipeMain;
-  } else if (selection == "siderecipes") {
+  } else if (selection === "siderecipes") {
     return recipeSide;
-  } else if (selection == "desserts") {
+  } else if (selection === "desserts") {
     return recipeDessert;
-  } else if (selection == "entire-meal") {
+  } else if (selection === "entire-meal") {
     let mealString = `<div class="dishes-container"><h3 class="dish-title">Main dish:</h3><div class="dishes">${recipeMain}</div>
     <h3 class="dish-title">Side dish:</h3><div class="dishes">${recipeSide}</div>
     <h3 class="dish-title">Dessert:</h3><div class="dishes">${recipeDessert}</div>`
@@ -119,4 +123,8 @@ function displayUsername(){
   if (username){
     userTitle.innerText = `What's for dinner, ${username}?`
   }
+}
+
+function alertUser() {
+  alert("'Add a recipe' feature coming soon!")
 }

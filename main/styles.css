@@ -89,7 +89,6 @@ a {
 /* ---- LEFT BOX ---- */
 
 #userInputForm {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: 25px;
