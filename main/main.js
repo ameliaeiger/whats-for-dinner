@@ -48,15 +48,15 @@ let desserts = [
 let userInputTheme = localStorage.getItem("theme");
 let username = localStorage.getItem("username");
 let userInputForm = document.querySelectorAll(".radioButtons");
-let resultsWindow = document.getElementById("recipeDisplayContainer");
-let userTitle = document.getElementById("welcome-message");
+let resultsWindow = document.querySelector(".recipeDisplayContainer");
+let userTitle = document.querySelector(".welcome-message");
 let navbar = document.querySelector(".navbar");
 let bodyImage = document.querySelector(".display-container");
 let boxes = document.querySelectorAll(".display");
 let customizable = document.querySelectorAll(".customizable");
-let addRecipeButton = document.getElementById("header-button");
-let homeButton = document.getElementById("home-button");
-let submitButton = document.getElementById("submit");
+let addRecipeButton = document.querySelector(".add-recipe");
+let homeButton = document.querySelector(".home");
+let submitButton = document.querySelector(".submit");
 
 submitButton.addEventListener("click", formHandler);
 displayCustomizedFeatures(userInputTheme);

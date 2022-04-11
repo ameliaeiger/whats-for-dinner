@@ -64,7 +64,7 @@ a {
 	display: flex;
 }
 
-#header-button {
+.add-recipe {
   margin-right: 50px;
   padding-left: 15px;
   padding-right: 15px;
@@ -99,14 +99,15 @@ a {
 
 /* ---- RIGHT BOX ---- */
 
-#recipeResultsContainer {
-  flex-direction: column;
+.recipeDisplayContainer {
+  display: flex;
   justify-content: center;
   align-items: center;
+	font-size: 22px;
 }
 
-#recipeDisplayContainer {
-  display: flex;
+#recipeResultsContainer {
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -114,7 +115,7 @@ a {
 /* HOLDS INNERHTML */
 #results-string-container {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-style: italic;
 }
 
@@ -129,7 +130,7 @@ a {
   font-size: 25px;
 }
 
-#cookpot {
+.cookpot {
   display: flex;
   height: 300px;
 }
