@@ -1,3 +1,4 @@
+//  ARRAYS
 let mainrecipes = [
   "Spaghetti and Meatballs",
   "Pineapple Chicken",
@@ -45,23 +46,26 @@ let desserts = [
   "Croissants",
   "Eclairs"]
 
+//  GLOBAL VARIABLES
 let userInputTheme = localStorage.getItem("theme");
 let username = localStorage.getItem("username");
 let userInputForm = document.querySelectorAll(".radioButtons");
-let resultsWindow = document.querySelector(".recipeDisplayContainer");
-let userTitle = document.querySelector(".welcome-message");
-let navbar = document.querySelector(".navbar");
-let bodyImage = document.querySelector(".display-container");
+let resultsWindow = document.getElementById("recipeDisplayContainer");
+let userTitle = document.getElementById("welcomeMessage");
 let boxes = document.querySelectorAll(".display");
 let customizable = document.querySelectorAll(".customizable");
-let addRecipeButton = document.querySelector(".add-recipe");
-let homeButton = document.querySelector(".home");
-let submitButton = document.querySelector(".submit");
+let addRecipeButton = document.getElementById("addRecipe");
+let homeButton = document.getElementById("home");
+let submitButton = document.getElementById("submit");
 
+//  EVENT LISTENERS
 submitButton.addEventListener("click", formHandler);
-displayCustomizedFeatures(userInputTheme);
 addRecipeButton.addEventListener("click", alertUser);
 
+//  LIL FUNCTION
+displayCustomizedFeatures(userInputTheme);
+
+//  FUNCTIONS
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
@@ -87,25 +91,22 @@ function formHandler(){
 }
 
 function returnRecipe(selection) {
-  let recipeMain = getRandomElement(mainrecipes);
-  let recipeSide = getRandomElement(siderecipes);
-  let recipeDessert = getRandomElement(desserts);
   if (selection === "mainrecipes") {
-    return recipeMain;
+    return getRandomElement(mainrecipes);
   } else if (selection === "siderecipes") {
-    return recipeSide;
+    return getRandomElement(siderecipes);
   } else if (selection === "desserts") {
-    return recipeDessert;
+    return getRandomElement(desserts);
   } else if (selection === "entire-meal") {
-    let mealString = `<div class="dishes-container"><h3 class="dish-title">Main dish:</h3><div class="dishes">${recipeMain}</div>
-    <h3 class="dish-title">Side dish:</h3><div class="dishes">${recipeSide}</div>
-    <h3 class="dish-title">Dessert:</h3><div class="dishes">${recipeDessert}</div>`
+    let mealString = `<div class="dishes-container"><h3 class="dish-title">Main dish:</h3><div class="dishes">${getRandomElement(mainrecipes)}</div>
+    <h3 class="dish-title">Side dish:</h3><div class="dishes">${getRandomElement(siderecipes)}</div>
+    <h3 class="dish-title">Dessert:</h3><div class="dishes">${getRandomElement(desserts)}</div>`
     return mealString
   }
 }
 
 function displayResults(randomRecipe) {
-  let resultsStringContainer = document.getElementById("results-string-container");
+  let resultsStringContainer = document.getElementById("resultsStringContainer");
   resultsStringContainer.innerText = "You should have: "
   resultsWindow.innerHTML = randomRecipe;
 }
